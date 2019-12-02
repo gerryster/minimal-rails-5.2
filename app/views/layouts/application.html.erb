@@ -10,14 +10,18 @@
     <!-- begin top level -->
 
     <%# This works perfectly: %>
-    <%# stylesheet_link_tag 'top_level', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'top_level', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%# This also works perfectly: %>
-    <%= stylesheet_link_tag asset_path('top_level'), media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%# stylesheet_link_tag asset_path('top_level'), media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%# This does not update the when top_level.css is saved. The server must
         be rebooted in order to see changes. %>
     <%# stylesheet_link_tag @top_level, media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <%# This also does not refresh when the asset is updated. %>
+    <%# stylesheet_link_tag ActionController::Base.helpers.asset_path('top_level'), media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <!-- end top level -->
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
