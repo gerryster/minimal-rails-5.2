@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Todos</h1>
+<% if Flipflop.new_layout? %>
+  <h1 class="shiny">Awesome Shiny Todos</h1>
+<% else %>
+  <h1>Todos</h1>
+<% end %>
 
 <table>
   <thead>

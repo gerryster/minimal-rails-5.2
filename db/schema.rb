@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_26_203913) do
+ActiveRecord::Schema.define(version: 2021_01_18_152140) do
+
+  create_table "flipflop_features", force: :cascade do |t|
+    t.string "key", null: false
+    t.boolean "enabled", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "todos", force: :cascade do |t|
     t.string "description"

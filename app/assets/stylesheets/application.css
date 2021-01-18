@@ -13,3 +13,7 @@
  *= require scaffolds.css
  *= require_self
  */
+
+ .shiny {
+   color: silver
+ }

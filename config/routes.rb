@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Flipflop::Engine => "/flipflop"
   root to: 'todos#index'
 
   resources :todos
